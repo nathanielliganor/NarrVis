@@ -4,7 +4,7 @@ import altair as alt
 import calendar
 
 # Enable data transformer for Altair
-alt.data_transformers.enable("data_server")
+alt.data_transformers.enable("default")
 
 # Load the data
 df = pd.read_csv("~/Documents/MarketData/MarketData.csv")

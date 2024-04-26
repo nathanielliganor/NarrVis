@@ -6,8 +6,9 @@ import calendar
 # Enable data transformer for Altair
 alt.data_transformers.enable("default")
 
-# Load the data
-df = pd.read_csv("~/Documents/MarketData/MarketData.csv")
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
 
 # Data preprocessing
 df['Date'] = pd.to_datetime(df['Date'])
